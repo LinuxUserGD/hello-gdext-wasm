@@ -2,12 +2,11 @@
 name = "hello_gdext"
 version = "0.1.0"
 edition = "2021"
+rust-version = "1.74.1"
+publish = false
 
 [lib]
 crate-type = ["cdylib"]
 
-[profile.release]
-debug = true
-
 [dependencies]
-godot = { git = "https://github.com/godot-rust/gdext", branch = "master", default-features = false }
+godot = { git = "https://github.com/godot-rust/gdext", branch = "master", default-features = false, features = ["custom-godot"] }

@@ -1,6 +1,6 @@
 use godot::prelude::*;
 use godot::engine::Sprite2D;
-use godot::engine::Sprite2DVirtual;
+use godot::engine::ISprite2D;
 
 #[derive(GodotClass)]
 #[class(base=Sprite2D)]
@@ -13,7 +13,7 @@ struct Player {
 }
 
 #[godot_api]
-impl Sprite2DVirtual for Player {
+impl ISprite2D for Player {
     fn init(sprite: Base<Sprite2D>) -> Self {
         godot_print!("Hello, world!"); // Prints to the Godot console
 
